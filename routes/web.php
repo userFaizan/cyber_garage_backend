@@ -43,7 +43,7 @@ Route::get('/dashboard', function () {
 // Route::get('/user',[UserController::class,'user'])->name('user');
 // });
 
-Route::get('/index',[\App\http\Controllers\UserController::class,'index'])->name('index');
+Route::get('/index',[UserController::class,'index'])->name('index');
 Route::get('/about_us',[UserController::class,'about_us'])->name('about_us');
 Route::get('/management',[UserController::class,'management'])->name('management');
 Route::get('/app',[UserController::class,'app'])->name('app');
