@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\http\Controllers\UserController;
-use App\http\Controllers\subscriptionController;
-use App\http\Controllers\StripeController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\subscriptionController;
+use App\Http\Controllers\StripeController;
 
 /*
 |--------------------------------------------------------------------------
