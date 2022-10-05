@@ -23,8 +23,9 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
- Route::get('/admin/user',[UserController::class,'admin_user'])->name('admin.user');
+ Route::get('/admin/user',[UserController::class,'users'])->name('admin.user');
  Route::get('/user/{id}',[UserController::class,'user'])->name('users.destroy');
+ Route::get('/user_show', [UserController::class, 'data'])->name('userdatashow');
  Route::get('/useredit/{id}',[UserController::class,'useredit'])->name('user.edit');
  Route::post('/user_edit',[UserController::class,'usere_dit'])->name('user_edit');
  Route::get('/show.subcription',[subscriptionController::class,'show_subcription'])->name('show.subcription');

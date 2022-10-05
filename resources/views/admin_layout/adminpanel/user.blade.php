@@ -6,6 +6,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
@@ -23,6 +24,9 @@
     <link rel="stylesheet" type="text/css" href="{{asset('app-assets/vendors/css/tables/datatable/rowGroup.bootstrap4.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css')}}">
     <!-- END: Vendor CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+    <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <!-- BEGIN: Theme CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css/bootstrap.css')}}">
@@ -68,7 +72,6 @@
    
     <!-- END: Header-->
 
-
     <!-- BEGIN: Main Menu-->
     <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
         <div class="navbar-header">
@@ -101,12 +104,10 @@
                     </li>
                     <li class=" nav-item"><a class="d-flex align-items-center" href="{{ route('show.subcription') }}"><i data-feather="user"></i><span class="menu-title text-truncate" data-i18n="user">UserDetail</span></a>
                     </li>
-                   
             </ul>
         </div>
     </div>
     <!-- END: Main Menu-->
-
     <!-- BEGIN: Content-->
     <div class="app-content content ">
         <div class="content-overlay"></div>
@@ -134,7 +135,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <table class=" table" id="myTable">
+                                <table class=" table" id="dt-multilingual">
                                     <thead>
                                         <tr>
                                             <!-- <th>ID</th> -->
@@ -142,23 +143,11 @@
                                             <th>Date</th>
                                             <th>Title</th>
                                             <th>Sub_Title</th>
-                                           
                                             <th>Action</th>
                                             
                                         </tr>
                                         <tr>
-                                        @foreach($users as $user)
-                                <!-- <td>{{$user['id']}}</td> -->
-                                <td><img src="{{asset('uploads/posts/'.$user['avatar'])}}" height="50px" width="50px"></td>
-
-                                <td>{{$user['dob']}}</td>
-                                <td>{{$user['title']}}</td>
-                                <td>{{$user['sub_title']}}</td>
-                                <td><a href="{{route('users.destroy', $user->id)}}"><i data-feather="trash"class="menu-title text-truncate" data-i18n="user"></i></a>
-                            <a href="{{route('user.edit', $user->id)}}"><i data-feather="edit"></i></a>
-                            </td>
-                                </tr>
-                                @endforeach
+                                      
                                     </thead>
                                 </table>
                             </div>
@@ -238,6 +227,12 @@
     <script src="{{ asset('app-assets/vendors/js/tables/datatable/buttons.print.min.js')}}"></script>
     <script src="{{ asset('app-assets/vendors/js/tables/datatable/dataTables.rowGroup.min.js')}}"></script>
     <script src="{{ asset('app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js')}}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript">
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
@@ -248,26 +243,31 @@
     <!-- BEGIN: Page JS-->
     <script src="{{ asset('app-assets/js/scripts/tables/table-datatables-basic.js')}}"></script>
     <!-- END: Page JS-->
-  
-   
-    <script>
-        setTimeout(function(){
-            feather.replace({
-                    width: 14,
-                    height: 14
-                });
-        },3000);
-    </script>
-    <script>
-        $(window).on('load', function() {
-            if (feather) {
-                feather.replace({
-                    width: 14,
-                    height: 14
-                });
-            }
-        })
-    </script>
+    <script type="text/javascript">
+  $(function () {
+    
+    var table = $('#dt-multilingual').DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: "{{ route('userdatashow') }}",
+        columns: [
+            {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+            {data: 'avatar', name: 'avatar'},
+            {data: 'dob', name: 'dob'},
+            {data: 'title', name: 'title'},
+            {data: 'sub_title', name: 'sub_title'},
+            {
+                data: 'action', 
+                name: 'action', 
+                orderable: true, 
+                searchable: true
+            },
+        ]
+    });
+    
+  });
+</script>
+
 </body>
 <!-- END: Body-->
 

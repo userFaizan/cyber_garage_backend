@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Blog;
 use Validator;
+use Illuminate\Support\Facades\Blade;
+use DataTables;
 use Illuminate\Support\Facades\DB;
 
 
@@ -41,12 +43,29 @@ public function subscription()
     return view('subscription');
 }
 
-public function admin_user()
+public function users()
 {
-    $data=Blog::all();
-    // return view('list',['users'=>$data]);
-    return view('admin_layout.adminpanel.user',['users'=>$data]);
+    // $data=Blog::all();
+    // // return view('list',['users'=>$data]);
+    return view('admin_layout.adminpanel.user');
+
 } 
+
+public function data(Request $request)
+{
+    if ($request->ajax()) {
+        $data = Blog::latest()->get();
+        return Datatables::of($data)
+            ->addIndexColumn()
+            ->addColumn('action', function($row){
+                $actionBtn = '<a href="javascript:void(0)" class="edit btn btn-success btn-sm">Edit</a> <a href="javascript:void(0)" class="delete btn btn-danger btn-sm">Delete</a>';
+                return $actionBtn;
+            })
+            ->rawColumns(['action'])
+            ->make(true);
+}
+}
+
 
 public function dashboard()
 {
