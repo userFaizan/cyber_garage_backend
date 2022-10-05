@@ -10,7 +10,10 @@ class Blog extends Model
     use HasFactory;
     protected $table = "blog";
     protected $fillable = [
+        'title',
+        'sub_title',
         'dob',
         'avatar',
         'discription',
-    ];}
+    ];
+}

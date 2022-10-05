@@ -1,0 +1,98 @@
+.login-wrapper{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.login-wrapper-inner{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.ptb-85{
+    padding: 85px 0;
+}
+.login-wrap-height{
+    height: 100vh;
+}
+.btn-lgn{
+    background: #ed1c24;
+    font-size: 18px;
+    padding: 12px 60px;
+    margin: 30px 0;
+    font-weight: bold;
+}
+@media only screen and (max-width: 2560px){
+    .ptb-85{
+        padding: 50px 0;
+    }
+     .container_background{
+        background: linear-gradient(to right, #ed1c24 45%, White 0%);
+     }
+     .background_items{
+        background: linear-gradient(to right, #ed1c24 44%, White 0%);
+     }
+}
+@media only screen and (max-width: 1440px){
+    .ptb-85{
+        padding: 50px 0;
+    }
+     .container_background{
+        background: linear-gradient(to right, #ed1c24 45%, White 0%);
+     }
+     .background_items{
+        background: linear-gradient(to right, #ed1c24 44%, White 0%);
+     }
+}
+@media only screen and (max-width: 1024px){
+    .ptb-85{
+        padding: 50px 0;
+    }
+     .container_background{
+        background: linear-gradient(to right, #ed1c24 45%, White 0%);
+     }
+     .background_items{
+        background: linear-gradient(to right, #ed1c24 44%, White 0%);
+     }
+}
+@media only screen and (max-width: 768px){
+    .container_background{
+        background: linear-gradient(to right, #ed1c24 45%, White 0%);
+      }
+      .background_items{
+        background: linear-gradient(to right, #ed1c24 44%, White 0%);
+     }
+}
+@media only screen and (max-width: 425px){
+.container_background{
+  background: linear-gradient(to right, #ed1c24 100%, White 0%);
+}
+.background_items{
+    background: none;
+ }
+ .right-wrapper {
+    color: white;
+    font-weight: 600;
+}
+
+.btn-lgn {
+    background: #ffffff;
+    font-size: 18px;
+    padding: 12px 60px;
+    width: 100%;
+    margin: 30px 0;
+    font-weight: bold;
+    color: #ed1c24;
+}
+
+.ptb-85 {
+    padding: 35px 0;
+}
+}
+@media only screen and (max-width: 375px){
+    .container_background{
+        background: linear-gradient(to right, #ed1c24 100%, White 0%);
+      }
+
+      .background_items{
+        background: none;
+     }
+}

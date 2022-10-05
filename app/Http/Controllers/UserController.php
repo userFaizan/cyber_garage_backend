@@ -45,9 +45,9 @@ public function subscription()
 
 public function users()
 {
-    // $data=Blog::all();
+    $users=Blog::all();
     // // return view('list',['users'=>$data]);
-    return view('admin_layout.adminpanel.user');
+    return view('admin_layout.adminpanel.user',compact('users'));
 
 } 
 
@@ -88,16 +88,16 @@ public function blog_single($id)
 }
 public function add_user(Request $req)
     {
-
-        $this->validate($req,[
-            'dob' => 'required',
-            'title' => 'required',
-            'sub_title' => 'required',
-            'discription' => 'required',
-            'avatar' => 'required|image|mimes:jpeg,png,jpg,gif'
-            // 'password_confirmation'=>'required_with:password|same:password|min:8',
-        ]);
-
+        // dd($req->all());
+        // $this->validate($req,[
+        //     'dob' => 'required',
+        //     'title' => 'required',
+        //     'sub_title' => 'required',
+        //     'discription' => 'required',
+        //     'avatar' => 'required|image|mimes:jpeg,png,jpg,gif'
+        //     // 'password_confirmation'=>'required_with:password|same:password|min:8',
+        // ]);
+      
         $Blog=new Blog;
         $Blog->title=$req->title;
         $Blog->sub_title=$req->sub_title;
@@ -112,21 +112,18 @@ public function add_user(Request $req)
            $file->move('uploads/posts/',$filename);
            $Blog->avatar = $filename;
        }
-    //    dd($Blog);
+      
 
         $Blog->save();
-        // return redirect()->back()->with('status','uaer added successfully');
+      
         return redirect('dashboard');
         
     }
-    public function  user($id){
-        // $data=Blog::find($id);
-        // $data->delete();
-    //    return redirect('admin_layout.adminpanel.user');
-    $user = Blog::where('id', $id)->firstorfail()->delete();
-        //   echo ("User Record deleted successfully.");
-        //   return redirect()->route('users.index');
-       return redirect('/admin/user');
+    public function  destory($id)
+    {
+    $user = Blog::find($id);
+    $user->delete();
+       return redirect('admin/user');
 
        
    }

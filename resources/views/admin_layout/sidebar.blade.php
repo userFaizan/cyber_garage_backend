@@ -5,7 +5,7 @@
       <a class="navbar-brand">
           <div ui-include="'../assets/images/logo.svg'"></div>
           <img src="../assets/images/logo.png" alt="." class="hide">
-          <span class="hidden-folded inline">Sinopec</span>
+          <span class="hidden-folded inline">Cyber Garage</span>
       </a>
       <!-- / brand -->
     </div>
@@ -17,7 +17,7 @@
               <small class="text-muted"></small>
             </li>
 
-            <li>
+            {{-- <li>
               <a href="#" >
                 <span class="nav-icon">
                   <i class="material-icons">&#xe3fc;
@@ -26,7 +26,7 @@
                 </span>
                 <span class="nav-text">Dashboard</span>
               </a>
-            </li>
+            </li> --}}
 
             <li>
               <a>
@@ -41,45 +41,19 @@
                     <span ui-include="'../assets/images/i_1.svg'"></span>
                   </i>
                 </span>
-                <span class="nav-text">Users</span>
+                <span class="nav-text">Blog</span>
               </a>
               <ul class="nav-sub">
                 <li>
-                    <a href="{{route('user.create')}}" >
-                      <span class="nav-text">Add User</span>
+                    <a href="{{ route('dashboard') }}" >
+                      <span class="nav-text">Add Blog</span>
                     </a>
                   </li>
                 <li>
-                  <a href="{{route('user.userlist')}}" >
-                    <span class="nav-text">User Lists</span>
+                  <a href="{{ route('admin.user') }}">
+                    <span class="nav-text">Blog List</span>
                   </a>
                 </li>
-              </ul>
-            </li>
-
-            <li>
-              <a>
-                <span class="nav-caret">
-                  <i class="fa fa-caret-down"></i>
-                </span>
-                <span class="nav-icon">
-                  <i class="material-icons">&#xe8f0;
-                    <span ui-include="'../assets/images/i_2.svg'"></span>
-                  </i>
-                </span>
-                <span class="nav-text">Folder</span>
-              </a>
-              <ul class="nav-sub">
-                <li>
-                  <a href="{{route('folder.create')}}" >
-                    <span class="nav-text">Add Folder</span>
-                  </a>
-                </li>
-                <li>
-                    <a href="{{route('folder.folderlist')}}" >
-                      <span class="nav-text">Folder List</span>
-                    </a>
-                  </li>
               </ul>
             </li>
             <li>
@@ -95,56 +69,19 @@
                       <span ui-include="'../assets/images/i_4.svg'"></span>
                     </i>
                   </span>
-                  <span class="nav-text">Certificate</span>
+                  <span class="nav-text">Users</span>
                 </a>
                 <ul class="nav-sub nav-mega nav-mega-3">
                   <li>
-                    <a href="{{route('certificates.create')}}" >
-                      <span class="nav-text">Add Certificate</span>
+                    <a href="{{ route('show.subcription') }}" >
+                      <span class="nav-text">Users List</span>
                     </a>
                   </li>
                   <li>
-                    <a href="{{route('certificates.certificateslist')}}" >
-                      <span class="nav-text">Certificate Lists</span>
-                    </a>
                   </li>
-                  {{-- <li>
-                    <a href="grid.html" >
-                      <span class="nav-text">Grid</span>
-                    </a>
-                  </li> --}}
-                  {{-- <li>
-                    <a href="icon.html" >
-                      <span class="nav-text">Icon</span>
-                    </a>
-                  </li> --}}
+             
                 </ul>
               </li>
-
-              <li>
-                <a>
-                  <span class="nav-caret">
-                    <i class="fa fa-caret-down"></i>
-                  </span>
-                  <span class="nav-label">
-                    <!--<b class="label label-sm accent"></b>-->
-                  </span>
-                  <span class="nav-icon">
-                    <i class="material-icons">&#xe429;
-                      <span ui-include="'../assets/images/i_4.svg'"></span>
-                    </i>
-                  </span>
-                  <span class="nav-text">Password</span>
-                </a>
-                <ul class="nav-sub nav-mega nav-mega-3">
-                  <li>
-                    <a href="{{route('index.password')}}" >
-                      <span class="nav-text">Change Password</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-
               <li>
                 <a href="{{route('logout')}}">
                   <span class="nav-caret">

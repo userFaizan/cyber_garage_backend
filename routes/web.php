@@ -24,7 +24,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
  Route::get('/admin/user',[UserController::class,'users'])->name('admin.user');
- Route::get('/user/{id}',[UserController::class,'user'])->name('users.destroy');
+ Route::get('/user/{id}',[UserController::class,'destory'])->name('users.destroy');
  Route::get('/user_show', [UserController::class, 'data'])->name('userdatashow');
  Route::get('/useredit/{id}',[UserController::class,'useredit'])->name('user.edit');
  Route::post('/user_edit',[UserController::class,'usere_dit'])->name('user_edit');
@@ -54,7 +54,7 @@ Route::get('/blog',[UserController::class,'blog'])->name('blog');
 
 
 Route::get('/blog_single/{id}',[UserController::class,'blog_single'])->name('blog_single');
-Route::post('/add_user',[UserController::class,'add_user'])->name('store');
+Route::post('/add_user',[UserController::class,'add_user'])->name('store.userdetails');
 Route::post('/subscription',[subscriptionController::class,'subscription_store'])->name('subscription.store');
 // Route::post('/subscription',[subscriptionController::class,'subscription'])->name('subscription');
 Route::get('/home',[subscriptionController::class,'home'])->name('home');
