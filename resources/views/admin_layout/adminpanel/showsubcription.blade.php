@@ -17,7 +17,7 @@
                     <th data-toggle="true">
                        id
                     </th>
-                    <th>Customer name</th>
+                    <th>Company name</th>
                     <th>C Address</th>
                     <th>City</th>
                     <th>State</th>
