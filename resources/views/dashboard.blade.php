@@ -260,7 +260,7 @@
     <!-- BEGIN: Page JS-->
     <script src="{{ asset('app-assets/js/scripts/tables/table-datatables-basic.js')}}"></script>
     <!-- END: Page JS-->
-
+  
     
     <script>
         $(window).on('load', function() {
@@ -272,6 +272,7 @@
             }
         })
     </script>
+
 </body>
 <!-- END: Body-->
 

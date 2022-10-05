@@ -1,154 +1,3 @@
-{{-- @extends('master');
-
-@section('content');
-
-
-    <!-- BEGIN: Content-->
-    <div class="app-content content ">
-        <div class="content-overlay"></div>
-        <div class="header-navbar-shadow"></div>
-        <div class="content-wrapper">
-            <div class="content-header row">
-                <div class="content-header-left col-md-9 col-12 mb-2">
-                    <div class="row breadcrumbs-top">
-                        <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Bootstrap Tables</h2>
-                            <div class="breadcrumb-wrapper">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Home</a>
-                                    </li>
-                                    <li class="breadcrumb-item active">Table Bootstrap
-                                    </li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
-                    <div class="form-group breadcrumb-right">
-                        <div class="dropdown">
-                            <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="grid"></i></button>
-                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="app-todo.html"><i class="mr-1" data-feather="check-square"></i><span class="align-middle">Todo</span></a><a class="dropdown-item" href="app-chat.html"><i class="mr-1" data-feather="message-square"></i><span class="align-middle">Chat</span></a><a class="dropdown-item" href="app-email.html"><i class="mr-1" data-feather="mail"></i><span class="align-middle">Email</span></a><a class="dropdown-item" href="app-calendar.html"><i class="mr-1" data-feather="calendar"></i><span class="align-middle">Calendar</span></a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content-body">
-              
-                <!-- Hoverable rows start -->
-                <div class="row" id="table-hover-row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Hoverable rows</h4>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Add <code class="highlighter-rouge">.table-hover</code> to enable a hover state on table rows within a
-                                    <code class="highlighter-rouge">&lt;tbody&gt;</code>.
-                                </p>
-                            </div>
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>id</th>
-                                            <th>Image</th>
-                                            <th>Name</th>
-                                            <th>L_Name</th>
-                                            <th>User_Name</th>
-                                            <th>Email</th>
-                                            <th>Gender</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-
-
-
-                                    
-                                     <tbody>
-                                       <tr>
-                                     
-                                        {{-- <tr>
-                                            <td>
-                                                <img src="../../../app-assets/images/icons/bootstrap.svg" class="mr-75" height="20" width="20" alt="Bootstrap" />
-                                                <span class="font-weight-bold">Bootstrap Project</span>
-                                            </td>
-                                            <td>Jerry Milton</td>
-                                            <td>
-                                                <div class="avatar-group">
-                                                    <div data-toggle="tooltip" data-popup="tooltip-custom" data-placement="top" title="" class="avatar pull-up my-0" data-original-title="Lilian Nenez">
-                                                        <img src="../../../app-assets/images/portrait/small/avatar-s-5.jpg" alt="Avatar" height="26" width="26" />
-                                                    </div>
-                                                    <div data-toggle="tooltip" data-popup="tooltip-custom" data-placement="top" title="" class="avatar pull-up my-0" data-original-title="Alberto Glotzbach">
-                                                        <img src="../../../app-assets/images/portrait/small/avatar-s-6.jpg" alt="Avatar" height="26" width="26" />
-                                                    </div>
-                                                    <div data-toggle="tooltip" data-popup="tooltip-custom" data-placement="top" title="" class="avatar pull-up my-0" data-original-title="Alberto Glotzbach">
-                                                        <img src="../../../app-assets/images/portrait/small/avatar-s-7.jpg" alt="Avatar" height="26" width="26" />
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge badge-pill badge-light-warning mr-1">Pending</span></td>
-                                            <td>
-                                                <div class="dropdown">
-                                                    <button type="button" class="btn btn-sm dropdown-toggle hide-arrow" data-toggle="dropdown">
-                                                        <i data-feather="more-vertical"></i>
-                                                    </button>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="javascript:void(0);">
-                                                            <i data-feather="edit-2" class="mr-50"></i>
-                                                            <span>Edit</span>
-                                                        </a>
-                                                        <a class="dropdown-item" href="javascript:void(0);">
-                                                            <i data-feather="trash" class="mr-50"></i>
-                                                            <span>Delete</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td> --}}
-                                        {{-- </tr>
-                                    </tbody>
-                                </table> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Hoverable rows end -->
-
-
-
-            </div>
-        </div>
-    </div>
-    <!-- END: Content-->
-    
-
-   
-@endsection --}}
-
-{{-- @section('pagescript').  
- <script type="text/javascript">
-                   $(document).ready(function() {
-    var table = $('#datatables-basic').DataTable({
-        processing: true,
-        serverSide: true,
-        ajax: "{{ route('data') }}",
-        columns: [
-            {data: 'DT_RowIndex', name: 'DT_RowIndex'},
-            {data: 'profile_img', name: 'profile_img'},
-            {data: 'name', name: 'name'},
-            {data: 'l_name', name: 'l_name'},
-            {data: 'user_name', name: 'user_name'},
-            {data: 'email', name: 'email'},
-            {data: 'gender', name: 'gender'},
-            {data: 'action', name: 'action', orderable: false, searchable: false},
-        ]
-    });
-});                     
-</script> --}}
-
-
-{{-- @endsection  --}}
 
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
@@ -191,6 +40,7 @@
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
     <!-- END: Custom CSS-->
+    {{-- <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" /> --}}
 
 </head>
 <!-- END: Head-->
@@ -284,7 +134,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <table class=" table" id="">
+                                <table class=" table" id="myTable">
                                     <thead>
                                         <tr>
                                             <!-- <th>ID</th> -->
@@ -307,8 +157,6 @@
                                 <td><a href="{{route('users.destroy', $user->id)}}"><i data-feather="trash"class="menu-title text-truncate" data-i18n="user"></i></a>
                             <a href="{{route('user.edit', $user->id)}}"><i data-feather="edit"></i></a>
                             </td>
-                               
-                                
                                 </tr>
                                 @endforeach
                                     </thead>
@@ -400,8 +248,7 @@
     <!-- BEGIN: Page JS-->
     <script src="{{ asset('app-assets/js/scripts/tables/table-datatables-basic.js')}}"></script>
     <!-- END: Page JS-->
-
-    
+  
    
     <script>
         setTimeout(function(){
