@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Blog;
+use Validator;
 use Illuminate\Support\Facades\DB;
 
 
@@ -68,6 +69,16 @@ public function blog_single($id)
 }
 public function add_user(Request $req)
     {
+
+        $this->validate($req,[
+            'dob' => 'required',
+            'title' => 'required',
+            'sub_title' => 'required',
+            'discription' => 'required',
+            'avatar' => 'required|image|mimes:jpeg,png,jpg,gif'
+            // 'password_confirmation'=>'required_with:password|same:password|min:8',
+        ]);
+
         $Blog=new Blog;
         $Blog->title=$req->title;
         $Blog->sub_title=$req->sub_title;
