@@ -1,6 +1,6 @@
      @extends('master')
      @section('content')
-       <!--hero section start 1-->
+      <!--hero section start 1-->
         <section class="hero-section ptb-120 text-white" style="background: url('assets/img/bg-top-11.png')no-repeat center; background-size:cover;">
             <div class="container">
                 <div class="row align-items-center">
@@ -8,8 +8,9 @@
                         <div class="row">
                             <!-- <div class="col-lg-9 m-auto p-0 m-0 "> -->
                                <div class="hero-content-wrap mt-5 mt-lg-0 mt-xl-0">
-                                <h1 class="fw-bold display-5 mb-3 text-white">Cyber Garage Repair Management System</h1>
-                                <h4 class="#" style="color:#ffb116; font-weight: 600;">Drives Innovation across Your Entire<br> Repair Business.</h4>
+                                <h1 class="mb-3 text-white" style="font-weight: 600; font-family: 'Arial';">Cyber Garage Repair Management System</h1>
+                                <p class="text-white">Built specifically  for the collision repair industry.</p>
+                                <h4 style="color:#ffb116; font-weight: 600;">Drives Innovation across Your Entire Repair Business.</h4>
                                 <p>Here at Cyber Garage, we have carved out a unique niche for ourselves in the automotive repair sector by offering a powerful software application that brings real-time solutions to everyday challenges.</p>
                                 <div class="row justify-content-lg-start align-items-center">
                                     <h6 class="text-white-70 mb-2">Strategic partners with BASF & KEYLOOP</h6>
@@ -157,9 +158,7 @@
                                     <ul class="list-unstyled mb-0 ">
                                         <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Work steadily toward your company’s goals.</li>
                                     </ul>
-                                    <ul class="list-unstyled mb-0 ">
-                                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Work steadily toward your company’s goals.</li>
-                                    </ul>
+                                    
                                     <ul class="list-unstyled mb-0 ">
                                         <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Have enough time to adjust to unexpected delays or supplements.</li>
                                     </ul>
@@ -268,4 +267,5 @@
             </div>
         </section>
         <!-- section 8 end-->
+
         @endsection

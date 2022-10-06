@@ -32,20 +32,20 @@
                     <div class="col-lg-11 col-12 m-auto text-center">
                         <div class="row">
                             <div class="col-lg-3 col-md-6 col-sm-6 m-auto mb-2">
-                                <iframe width="100%" height="200" src="https://www.youtube.com/embed/QAP0Lh81ntY"></iframe>
-                                <h6 class="mt-3">Estimate & Create Repair Order</h6>
+                                <iframe width="100%" height="200" src="https://www.youtube.com/embed/gTtGngc281k"></iframe>
+                                 <h4 class="mt-3">Job costing in Cyber Garage </h4>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6 m-auto mb-2">
-                                <iframe width="100%" height="200" src="https://www.youtube.com/embed/UFjLRQw855k"></iframe>
-                                <h6 class="mt-3">Admin App</h6>
+                                <iframe width="100%" height="200" src="https://www.youtube.com/embed/grSzTEpd2ns"></iframe>
+                                <h4 class="mt-3">scheduling customers in Cyber Garage</h4>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6 m-auto mb-2">
-                                <iframe width="100%" height="200" src="https://www.youtube.com/embed/0pELYAEgo3w"></iframe>
-                                <h6 class="mt-3">Write A Manual Estimate </h6>
+                                <iframe width="100%" height="200" src="https://www.youtube.com/embed/wpqn9ZUTSjo"></iframe>
+                                <h4 class="mt-3">How to order parts in Cyber Garage</h4>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6 m-auto mb-2">
-                                <iframe width="100%" height="200" src="https://www.youtube.com/embed/ALJTAzOx3o0"></iframe>
-                                <h6 class="mt-3">Job Costing</h6>
+                                <iframe width="100%" height="200" src="https://www.youtube.com/embed/Ip3XuuVG6CU"></iframe>
+                                <h4 class="mt-3">Parts activity manager # 1</h4>
                             </div>
                         </div>
                         <!-- 21:9 aspect ratio -->
