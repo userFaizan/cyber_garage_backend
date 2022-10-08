@@ -72,7 +72,7 @@
       
                         <form role="form" action="{{ route('handlePost') }}" method="post" class="validation"
                                                          data-cc-on-file="false"
-                                                        data-stripe-publishable-key=pk_live_DiHrzTx0G76bQRJtoXMwzTTI00PKxLuzYA
+                                                        data-stripe-publishable-key=pk_test_51JeDF7HC0u1fuha6B6Oq0wlzsoIABF6lIGSqmXdYTub8DGNIshzE8mErbAdexB5J800fDcjznvPNm8OmtowtZrTa00rAqq1NKb
                                                         id="payment-form">
                             @csrf
       
@@ -82,7 +82,12 @@
                                         class='form-control' size='4' type='text'>
                                 </div>
                             </div>
-      
+                            {{-- <div class='form-row row'>
+                                <div class='col-xs-12 form-group required'>
+                                    <label class='control-label'>Customer Name</label> <input
+                                        class='form-control' size='4' type='text'>
+                                </div>
+                            </div> --}}
                             <div class='form-row row'>
                                 <div class='col-xs-12 form-group  required'>
                                     <label class='control-label'>Card Number</label> <input
