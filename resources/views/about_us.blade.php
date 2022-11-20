@@ -8,9 +8,8 @@
                     <div class="col-lg-12 col-md-12 align-items-center m-auto padd" >
                         <div class="row">
                             <div class="hero-content-wrap">
-                                <h1 class="fw-bold display-5 text-white mt-5">About Us</h1>
-                                <p>Cyber Garage Repair Management System<br>
-                                Drives innovation across your entire repair business.</p>
+                                <h1 class="fw-bold display-5 text-white mt-5">{{ $about_1->title }}</h1>
+                                <p>{!! $about_1->sub_title !!}</p>
                             </div>
                         </div>
                     </div>
@@ -29,20 +28,20 @@
                     <div class="col-lg-7 col-sm-12 padd">
                         <!-- <div class="col-lg-10 p-0 m-0 m-auto padd-2"> -->
                             <div class="why-choose-content m-0">
-                                <h2>Cyber Garage Repair Management System</h2>
-                                <p>We provide trustworthy software management technologies that are especially designed for the automotive sector. Our real-time solutions spare your staff the hassles, costs, and time they would otherwise incur, allowing you to focus on what you do best: increasing productivity and enhancing your bottom line.</p>
-                                <h2>Facing everyday challenges</h2>
-                                <p>Our robust application was created from the ground up with automobile repair businesses in mind—a market we are very familiar with.</p>
-                                <p>Our management system platform is always user-friendly, quick and easy to navigate, and will keep your workforce more engaged and productive since it addresses the difficulties repair shops deal with every day.</p>
-                                 <h2>A message from the fonder</h2>
-                                 <p>Robert Williams, the founder of Cyber Garage, has been in the auto repair business for more than 35 years, he opened his first shop in California in 1986. We know that maintaining customer and company loyalty are crucial. Based on our years of experience we’ve built, our software tools to make it simple and straightforward to stay in touch, enabling your company to provide complete customer service and support.</p>
+                                <h2>{{ $about_2->title_1 }}</h2>
+                                <p>{!! $about_2->para_1 !!}</p>
+                                <h2>{{ $about_2->title_2 }}</h2>
+                                <p>{!! $about_2->para_2 !!}</p>
+                                {{-- <p>Our management system platform is always user-friendly, quick and easy to navigate, and will keep your workforce more engaged and productive since it addresses the difficulties repair shops deal with every day.</p> --}}
+                                 <h2>{{ $about_2->title_3 }}</h2>
+                                 <p>{!! $about_2->para_3 !!}</p>
                                     <a href="about-us.html" class="read-more-link text-decoration-none">Know More Contact Us <i class="far fa-arrow-right ms-2"></i></a>
                             </div>
                         <!-- </div> -->
                     </div>
                      <div class="col-lg-5 col-12">
                         <div class="feature-img-holder">
-                            <img src="assets/img/Untitled-min.png" class="img-fluid" alt="feature-image">
+                            <img src="{{asset('uploads/home/'.$about_2['file_image'])}}" class="img-fluid" alt="feature-image">
                         </div>
                     </div>
                 </div>
@@ -92,12 +91,15 @@
                             <div class="row">
                                 <div class="col-md-4 m-auto">
                                     <div class="d-flex align-items-center justify-content-lg-between">
-                                        <h2 class="text-capitalize mb-4">What we offer</h2>
+                                        <h2 class="text-capitalize mb-4">{{ $section_8->title }}</h2>
                                     </div>
                                 </div>
                                 <div class="col-md-8 m-auto">
                                     <ul class="list-unstyled  d-flex flex-wrap list-two-col ">
-                                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>User friendly dashboard</li>
+                                        @foreach ($section_list_8 as $data )
+                                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>{{ $data->list_item }}</li>
+                                        @endforeach
+                                        {{-- <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>User friendly dashboard</li>
                                         <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Employee Time Clock </li>
                                         <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Job Coasting Platform</li>
                                         <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Send Text Messages</li>
@@ -108,11 +110,11 @@
                                         <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>MSO Integrations</li>
                                         <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Customer Search</li>
                                         <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Accounts Receivables</li>
-                                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>And Much More!</li>
+                                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>And Much More!</li> --}}
                                     </ul>
                                 </div>
                             </div>
-                                <img src="assets/img/screen/5th-img.png" class="img-fluid" alt="feature-image">
+                            <img src="{{asset('uploads/home/'.$section_8['section_8_image'])}}" class="img-fluid" alt="feature-image">
                         </div>
                     </div>
                     

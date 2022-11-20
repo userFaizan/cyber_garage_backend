@@ -9,15 +9,17 @@
                     <div class="col-lg-7 col-md-7 align-items-center m-auto" >
                         <div class="row">
                             <div class="hero-content-wrap">
-                                <h1 class="fw-bold display-5 mt-5 text-white">Videos</h1>
-                                <p>The Most advanced app on the market<br>
-                                    The mobile apps are included in the management system</p>
+                                <h1 class="fw-bold display-5 mt-5 text-white">{{ $section_1->title }}</h1>
+                                {{-- <p>The Most advanced app on the market<br>
+                                    The mobile apps are included in the management system</p> --}}
+                                    <p>{!! $section_1->section_1 !!}</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-5 m-auto">
                         <div class="hero-content-wrap">
-                            <p class="lead">There are training video tutorials related to Cyber Garage software for easy Learning.</p>
+                            <p class="lead">  {!! $section_1->section_2 !!}</p>
+                            {{-- <p class="lead">There are training video tutorials related to Cyber Garage software for easy Learning.</p> --}}
                         </div>
                     </div>
                 </div>
@@ -31,22 +33,13 @@
                 <div class="row justify-content-lg-between align-items-center">
                     <div class="col-lg-11 col-12 m-auto text-center">
                         <div class="row">
+                            @foreach ($section_2 as  $data)
                             <div class="col-lg-3 col-md-6 col-sm-6 m-auto mb-2">
-                                <iframe width="100%" height="200" src="https://www.youtube.com/embed/gTtGngc281k"></iframe>
-                                 <h4 class="mt-3">Job costing in Cyber Garage </h4>
+                                <iframe width="100%" height="200" src="{{ $data->file_1 }}"></iframe>
+                                 <h4 class="mt-3">{{ $data->title_1}}</h4>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 m-auto mb-2">
-                                <iframe width="100%" height="200" src="https://www.youtube.com/embed/grSzTEpd2ns"></iframe>
-                                <h4 class="mt-3">scheduling customers in Cyber Garage</h4>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 m-auto mb-2">
-                                <iframe width="100%" height="200" src="https://www.youtube.com/embed/wpqn9ZUTSjo"></iframe>
-                                <h4 class="mt-3">How to order parts in Cyber Garage</h4>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 m-auto mb-2">
-                                <iframe width="100%" height="200" src="https://www.youtube.com/embed/Ip3XuuVG6CU"></iframe>
-                                <h4 class="mt-3">Parts activity manager # 1</h4>
-                            </div>
+                            @endforeach
+                          
                         </div>
                         <!-- 21:9 aspect ratio -->
                     </div>
@@ -82,12 +75,15 @@
                             <div class="row">
                                 <div class="col-md-4 m-auto">
                                     <div class="d-flex align-items-center justify-content-lg-between">
-                                        <h2 class="text-capitalize mb-4">What we offer</h2>
+                                        <h2 class="text-capitalize mb-4">{{ $section_8->title }}</h2>
                                     </div>
                                 </div>
                                 <div class="col-md-8 m-auto">
                                     <ul class="list-unstyled  d-flex flex-wrap list-two-col ">
-                                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>User friendly dashboard</li>
+                                        @foreach ($section_list_8 as $data )
+                                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>{{ $data->list_item }}</li>
+                                        @endforeach
+                                        {{-- <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>User friendly dashboard</li>
                                         <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Employee Time Clock </li>
                                         <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Job Coasting Platform</li>
                                         <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Send Text Messages</li>
@@ -98,11 +94,11 @@
                                         <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>MSO Integrations</li>
                                         <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Customer Search</li>
                                         <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Accounts Receivables</li>
-                                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>And Much More!</li>
+                                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>And Much More!</li> --}}
                                     </ul>
                                 </div>
                             </div>
-                                <img src="assets/img/screen/5th-img.png" class="img-fluid" alt="feature-image">
+                                <img src="{{asset('uploads/home/'.$section_8['section_8_image'])}}" class="img-fluid" alt="feature-image">
                         </div>
                     </div>
                     

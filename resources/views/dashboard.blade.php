@@ -15,23 +15,37 @@
               <div class="form-group">
                 <label for="exampleInputName1">Title</label>
                 <input type="name" name="title" class="form-control" id="exampleInputEmail1" placeholder="Enter Tag">
+                @if ($errors->has('title'))
+                <span class="text-danger">{{ $errors->first('title') }}</span>
+            @endif
               </div>
               <div class="form-group">
                 <label for="exampleInputName1">Sub_Title</label>
                 <input type="name" name="sub_title" class="form-control" id="exampleInputEmail1" placeholder="Enter Name">
+                @if ($errors->has('sub_title'))
+                <span class="text-danger">{{ $errors->first('sub_title') }}</span>
+            @endif
               </div>
               <div class="form-group">
                 <label for="exampleInputName1">Date</label>
                 <input type="date" name="dob" class="form-control">
+                @if ($errors->has('dob'))
+                <span class="text-danger">{{ $errors->first('dob') }}</span>
+            @endif
               </div>
               <div class="form-group">
                 <label for="exampleInputName1">Choose Blog Image</label>
                 <input type="file" name="avatar" class="form-control">
+                @if ($errors->has('avatar'))
+                <span class="text-danger">{{ $errors->first('avatar') }}</span>
+            @endif
               </div>
               <div class="form-group">
                 <label class="d-block">About</label>
-                <textarea class="form-control " rows="3"  name="discription" required></textarea>
-            
+                <textarea class="form-control ckeditor" rows="3"  name="discription" required></textarea>
+                @if ($errors->has('discription'))
+                <span class="text-danger">{{ $errors->first('discription') }}</span>
+            @endif
             </div>
               <button type="submit" class="btn white m-b">Submit</button>
             </form>
@@ -40,10 +54,5 @@
       </div>
     </div>
   </div>
-  @section('script')
-  <script src="https://cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script>
-  <script>
-    CKEDITOR.replace( 'discription' );
-</script>
-  @endsection
+
 @include('admin_layout.footer')

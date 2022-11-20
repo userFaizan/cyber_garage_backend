@@ -52,9 +52,21 @@
 <!-- ajax -->
 <script src="{{asset('assets/asset/libs/jquery/jquery-pjax/jquery.pjax.js')}}"></script>
 <script src="{{asset('assets/asset/scripts/ajax.js')}}"></script>
-<!-- endbuild -->
 
-@yield('script')
+<script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+$(document).ready( function () {
+    $('.myTable').DataTable();
+});
+</script>
+<!-- endbuild -->
+<script src="https://cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script>
+<script>
+$(document).ready(function () {
+      $('.ckeditor').ckeditor();
+  });
+  </script>
+{{-- @yield('script') --}}
 
 </body>
 </html>

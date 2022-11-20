@@ -83,6 +83,402 @@
                 </ul>
               </li>
               <li>
+                <a>
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-label">
+                    <!--<b class="label rounded label-sm primary"></b>-->
+                  </span>
+                  <span class="nav-icon">
+                    <i class="material-icons">&#xe5c3;
+                      <span ui-include="'../assets/images/i_1.svg'"></span>
+                    </i>
+                  </span>
+                  <span class="nav-text">Home</span>
+                </a>
+                <ul class="nav-sub">
+                  <li>
+                      <a href="{{ route('home.index') }}" >
+                        <span class="nav-text">Section # 1</span>
+                      </a>
+                    </li>
+                  <li>
+                    <a href="{{ route('home.index.2') }}">
+                      <span class="nav-text">Section # 2</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('home.index.3') }}">
+                      <span class="nav-text">Section # 3</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('home.index.4') }}">
+                      <span class="nav-text">Section # 4</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('home.index.5') }}">
+                      <span class="nav-text">Section # 5</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('home.index.6') }}">
+                      <span class="nav-text">Section # 6</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('home.index.7') }}">
+                      <span class="nav-text">Section # 7</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('home.index.8') }}">
+                      <span class="nav-text">Section # 8</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('index.home.list.2') }}">
+                      <span class="nav-text">Add Section # 2</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('home.list.2') }}">
+                      <span class="nav-text">List Section # 2</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('index.home.list.5') }}">
+                      <span class="nav-text">Add Section # 5</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('home.list.5') }}">
+                      <span class="nav-text">List Section # 5</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('index.home.list.8') }}">
+                      <span class="nav-text">Add Section # 8</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('home.list.8') }}">
+                      <span class="nav-text">List Section # 8</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a>
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-label">
+                    <!--<b class="label label-sm accent"></b>-->
+                  </span>
+                  <span class="nav-icon">
+                    <i class="material-icons">&#xe429;
+                      <span ui-include="'../assets/images/i_4.svg'"></span>
+                    </i>
+                  </span>
+                  <span class="nav-text">Videos</span>
+                </a>
+                <ul class="nav-sub nav-mega nav-mega-3">
+                  <li>
+                    <a href="{{ route('video.index') }}" >
+                      <span class="nav-text">Section # 1</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('video.index.2') }}" >
+                      <span class="nav-text">Add Videos</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('videolist') }}" >
+                      <span class="nav-text">Video List</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a>
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-label">
+                    <!--<b class="label rounded label-sm primary"></b>-->
+                  </span>
+                  <span class="nav-icon">
+                    <i class="material-icons">&#xe5c3;
+                      <span ui-include="'../assets/images/i_1.svg'"></span>
+                    </i>
+                  </span>
+                  <span class="nav-text">About Us</span>
+                </a>
+                <ul class="nav-sub">
+                  <li>
+                      <a href="{{ route('about.index.1') }}" >
+                        <span class="nav-text">Section # 1</span>
+                      </a>
+                    </li>
+                  <li>
+                    <a href="{{ route('about.index.2') }}">
+                      <span class="nav-text">Section # 2</span>
+                    </a>
+                  </li>      
+                </ul>
+              </li>
+              <li>
+                <a>
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-label">
+                    <!--<b class="label label-sm accent"></b>-->
+                  </span>
+                  <span class="nav-icon">
+                    <i class="material-icons">&#xe429;
+                      <span ui-include="'../assets/images/i_4.svg'"></span>
+                    </i>
+                  </span>
+                  <span class="nav-text">Management</span>
+                </a>
+                <ul class="nav-sub nav-mega nav-mega-3">
+                  <li>
+                    <a href="{{ route('management.index.1') }}" >
+                      <span class="nav-text">Section # 1</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('management.index.2') }}" >
+                      <span class="nav-text">Section # 2</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('management.index.3') }}" >
+                      <span class="nav-text">Section # 3</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('add.management.list.1') }}">
+                      <span class="nav-text">Add Management Items</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('index.management.list.1') }}">
+                      <span class="nav-text"> Management Items List</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a>
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-label">
+                    <!--<b class="label rounded label-sm primary"></b>-->
+                  </span>
+                  <span class="nav-icon">
+                    <i class="material-icons">&#xe5c3;
+                      <span ui-include="'../assets/images/i_1.svg'"></span>
+                    </i>
+                  </span>
+                  <span class="nav-text">Subscriptions</span>
+                </a>
+                <ul class="nav-sub">
+                  <li>
+                      <a href="{{ route('subscriton.index') }}" >
+                        <span class="nav-text">Section # 1</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="{{ route('add.subscriton.list.1') }}" >
+                        <span class="nav-text">Add Subscription Items</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="{{ route('index.subscriton.list.1') }}" >
+                        <span class="nav-text">Subscription Items List</span>
+                      </a>
+                    </li>
+                
+                  <li>
+                    {{-- <a href="{{ route('about.index.2') }}">
+                      <span class="nav-text">Section # 2</span>
+                    </a>
+                  </li>       --}}
+                </ul>
+              </li>
+              <li>
+                <a>
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-label">
+                    <!--<b class="label label-sm accent"></b>-->
+                  </span>
+                  <span class="nav-icon">
+                    <i class="material-icons">&#xe429;
+                      <span ui-include="'../assets/images/i_4.svg'"></span>
+                    </i>
+                  </span>
+                  <span class="nav-text">Apps</span>
+                </a>
+                <ul class="nav-sub nav-mega nav-mega-3">
+                  <li>
+                    <a href="{{ route('app.index.1') }}" >
+                      <span class="nav-text">Section # 1</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('app.index.2') }}" >
+                      <span class="nav-text">Section # 2</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('app.index.3') }}" >
+                      <span class="nav-text">Section # 3</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('app.index.4') }}" >
+                      <span class="nav-text">Section # 4</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('add.app.list.1') }}">
+                      <span class="nav-text">Add App Items</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('index.app.list.1') }}">
+                      <span class="nav-text"> App Items List</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('add.app.list.2') }}">
+                      <span class="nav-text">Add App Items # 2</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('index.app.list.2') }}">
+                      <span class="nav-text"> App Items List # 2</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('add.app.list.3') }}">
+                      <span class="nav-text">Add App Items # 3</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('index.app.list.3') }}">
+                      <span class="nav-text"> App Items List # 3</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('add.app.list.4') }}">
+                      <span class="nav-text">Add App Items # 4</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ route('index.app.list.4') }}">
+                      <span class="nav-text"> App Items List # 4</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a>
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-label">
+                    <!--<b class="label label-sm accent"></b>-->
+                  </span>
+                  <span class="nav-icon">
+                    <i class="material-icons">&#xe429;
+                      <span ui-include="'../assets/images/i_4.svg'"></span>
+                    </i>
+                  </span>
+                  <span class="nav-text">Terms</span>
+                </a>
+                <ul class="nav-sub nav-mega nav-mega-3">
+                 
+                  <li>
+                    <a href="{{ route('terms.index.1') }}">
+                      <span class="nav-text"> Update_term</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a>
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-label">
+                    <!--<b class="label rounded label-sm primary"></b>-->
+                  </span>
+                  <span class="nav-icon">
+                    <i class="material-icons">&#xe5c3;
+                      <span ui-include="'../assets/images/i_1.svg'"></span>
+                    </i>
+                  </span>
+                  <span class="nav-text">Privacy</span>
+                </a>
+                <ul class="nav-sub">
+                  <li>
+                      <a href="{{ route('privacy.index.1') }}" >
+                        <span class="nav-text">Update Sections</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="{{ route('add.privacy.list.1') }}" >
+                        <span class="nav-text">Add Privacy Items # 1</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="{{ route('index.privacy.list.1') }}" >
+                        <span class="nav-text">Privacy Items List # 1</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="{{ route('add.privacy.list.2') }}" >
+                        <span class="nav-text">Add Privacy Items # 2</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="{{ route('index.privacy.list.2') }}" >
+                        <span class="nav-text">Privacy Items List # 2</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="{{ route('add.privacy.list.3') }}" >
+                        <span class="nav-text">Add Privacy Items # 3</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="{{ route('index.privacy.list.3') }}" >
+                        <span class="nav-text">Privacy Items List # 3</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="{{ route('add.privacy.list.4') }}" >
+                        <span class="nav-text">Add Privacy Items # 4</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="{{ route('index.privacy.list.4') }}" >
+                        <span class="nav-text">Privacy Items List # 4</span>
+                      </a>
+                    </li>
+                </ul>
+              </li>
+              <li>
                 <a href="{{route('logout')}}">
                   <span class="nav-caret">
                     <i class="fa-solid fa-toggle-off"></i>                 

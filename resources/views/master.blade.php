@@ -179,7 +179,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div class="row justify-content-between align-items-center">
                         <div class="col-md-7 col-lg-7 padd">
                             <div class="copyright-text">
-                                <p class="mb-lg-0 mb-md-0">&copy; 2021 All Rights Reserved | <a href="privacy-policy.html" target="_blank" style="text-decoration:none; color: #d6d5e1;"> Privacy Policy</a> | <a href="terms-of-use.html" target="_blank" style="text-decoration:none; color: #d6d5e1;"> Terms of Use</a></p>
+                                <p class="mb-lg-0 mb-md-0">&copy; 2021 All Rights Reserved | <a href="{{ route('privacy') }}" target="_blank" style="text-decoration:none; color: #d6d5e1;"> Privacy Policy</a> | <a href="{{ route('terms') }}" target="_blank" style="text-decoration:none; color: #d6d5e1;"> Terms of Use</a></p>
                             </div>
                         </div>
                         <div class="col-md-4 col-lg-4">

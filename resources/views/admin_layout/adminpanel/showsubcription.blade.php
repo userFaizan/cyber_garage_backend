@@ -4,14 +4,14 @@
     <div class="padding">
         <div class="box">
           <div class="box-header">
-            <h2>Blog Lists</h2>
+            <h2>User Lists</h2>
             {{-- <small>Make HTML tables on smaller devices look awesome</small> --}}
           </div>
           {{-- <div class="box-body">
             Search: <input id="filter" type="text" class="form-control input-sm w-auto inline m-r"/>
           </div> --}}
           <div style="margin: 23px;">
-            <table  class="table m-b-none newTable" ui-jp="footable" data-filter="#filter" data-page-size="5">
+            <table  class="table m-b-none myTable" ui-jp="footable" data-filter="#filter" data-page-size="5">
               <thead>
                 <tr>
                     <th data-toggle="true">
@@ -71,12 +71,12 @@
       </div>
 </div>
 
-@section('script')
+{{-- @section('script')
 <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript">
 $(document).ready( function () {
     $('.newTable').DataTable();
 });
 </script>
-@endsection
+@endsection --}}
 @include('admin_layout.footer')
